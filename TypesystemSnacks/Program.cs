@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TypesystemSnacks
@@ -221,6 +222,41 @@ namespace TypesystemSnacks
 
             // Stampo la somma degli elementi in posizione dispari
             Console.WriteLine("La somma degli elementi in posizione dispari è: " + sommaDispari);
+
+
+
+            // Snack 9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+            Console.WriteLine("Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.");
+
+            // Creo un array vuoto
+            int[] arrayNumeri = new int[0];
+
+            // Creo la variabile per la somma degli elementi nell'array
+            int totale = 0;
+
+            // Ciclo while per chiedere all'utente di inserire numeri fino a quando la somma non supera il numero 50
+            while (totale < 50)
+            {
+                Console.WriteLine("Inserisci un numero: ");
+                int numm = int.Parse(Console.ReadLine());
+
+                // Aggiungo il numero all'arrayNumeri
+                Array.Resize(ref arrayNumeri, arrayNumeri.Length + 1);
+
+                // Assegno il valore dell'ultimo numero inserito dall'utente all'ultimo elemento dell'array
+                arrayNumeri[arrayNumeri.Length - 1] = numm;
+
+                // Aggiorna la somma degli elementi nell'array
+                totale += numm;
+            }
+
+            // Stampa l'array e la sua somma
+            Console.WriteLine("Gli elementi dell'array sono:");
+            foreach (int num in arrayNumeri)
+            {
+                Console.WriteLine(num);
+            }
+            Console.WriteLine("La somma degli elementi dell'array è: " + totale);
         }
     }
 }
