@@ -6,7 +6,7 @@ namespace TypesystemSnacks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Snack 1. L’utente inserisce due numeri in successione.\r\nIl software stampa il maggiore.");
+            Console.WriteLine("Snack 1. L’utente inserisce due numeri in successione. Il software stampa il maggiore.");
 
             // Chiedo all'utente di inserire il primo numero
             Console.WriteLine("Inserisci il primo numero");
