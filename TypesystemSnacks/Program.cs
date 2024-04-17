@@ -68,7 +68,7 @@ namespace TypesystemSnacks
             // Ciclo for per effettuare 10 richieste all'utente
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Inserisci il numero " + (i+1) + ":");
+                Console.WriteLine("Inserisci il numero " + (i + 1) + ":");
 
                 // Leggo l'input dell'utente e lo converto in un numero intero
                 int numero = int.Parse(Console.ReadLine());
@@ -100,7 +100,7 @@ namespace TypesystemSnacks
             media = (double)sum / 9; // 9 perché ci sono 9 numeri da 2 a 10
 
             // Stampa la somma e la media
-            Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sum}" );
+            Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sum}");
             Console.WriteLine($"La media dei numeri da 2 a 10 è: {media:F2} ");
 
 
@@ -110,7 +110,7 @@ namespace TypesystemSnacks
 
             //Chiedo all'utente di inserire un numero
             Console.WriteLine("Inserisci un numero:");
-            
+
             // Leggo l'input dell'utente e lo converto in un numero intero
             int number = int.Parse(Console.ReadLine());
 
@@ -119,7 +119,8 @@ namespace TypesystemSnacks
             {
                 // nel caso il numero è pari
                 Console.WriteLine("Il numero inserito è pari!");
-            }else
+            }
+            else
             {
                 // nel caso il numero è dispari
                 Console.WriteLine("Il numero inserito è dispari. Il successivo è: " + (number + 1));
@@ -173,7 +174,7 @@ namespace TypesystemSnacks
             int indice = 0;
 
             // Chiedo all'utente di inserire un numero 6 volte
-            for (int i = 0; i <6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine("Inserisci il " + (i + 1) + "° numero" + ":");
                 int numero = int.Parse(Console.ReadLine());
@@ -198,7 +199,28 @@ namespace TypesystemSnacks
             // Snack 8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
             Console.WriteLine("Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.");
 
+            // Creo un array di numeri interi
+            int[] numeri = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
 
+            // Creo la variabile per memorizzare la somma degli elementi in posizione dispari
+            int sommaDispari = 0;
+
+            // Ciclo for su array numeri
+            for (int i = 0; i < numeri.Length; i++)
+            {
+                // Verifico se l'indice è dispari
+                if (i % 2 != 0)
+                {
+                    // Aggiungo il valore dell'elemento corrente alla somma
+                    sommaDispari += numeri[i];
+
+                    // Stampo i numeri con indice dispari
+                    Console.WriteLine("I numeri con indice dispari sono:" + numeri[i]);
+                }
+            }
+
+            // Stampo la somma degli elementi in posizione dispari
+            Console.WriteLine("La somma degli elementi in posizione dispari è: " + sommaDispari);
         }
     }
 }
