@@ -80,6 +80,7 @@ namespace TypesystemSnacks
             Console.WriteLine("La somma dei numeri inseriti è: " + somma);
 
 
+
             // Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
             Console.WriteLine("Snack 4. Calcola la somma e la media dei numeri da 2 a 10.");
 
