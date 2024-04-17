@@ -257,6 +257,38 @@ namespace TypesystemSnacks
                 Console.WriteLine(num);
             }
             Console.WriteLine("La somma degli elementi dell'array è: " + totale);
+
+
+
+            // Snack 10. Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
+            Console.WriteLine("Fai inserire un numero, che chiameremo N, all’utente.\r\nGenera N array, ognuno formato da 10 numeri casuali tra 1 e 100.\r\nOgni volta che ne crei uno, stampalo a schermo.\r\n");
+
+            // Chiedo all'utente di inserire un numero
+            Console.WriteLine("Inserisci un numero");
+
+            // Leggo il numero e lo traduco in int
+            int N = int.Parse(Console.ReadLine());
+
+            // Genera N array con 10 numeri casuali ciascuno e li stampa a schermo
+            for (int i = 1; i <= N; i++)
+            {
+                int[] array = GeneraArrayCasuale(10);
+                Console.WriteLine($"Array {i}: [{string.Join(", ", array)}]");
+            }
+        }
+
+        // Metodo per generare un array di numeri casuali
+        static int[] GeneraArrayCasuale(int lunghezza)
+        {
+            Random random = new Random();
+            int[] array = new int[lunghezza];
+
+            for (int i = 0; i < lunghezza; i++)
+            {
+                array[i] = random.Next(1, 101); // Genera un numero casuale tra 1 e 100
+            }
+
+            return array;
         }
     }
 }
