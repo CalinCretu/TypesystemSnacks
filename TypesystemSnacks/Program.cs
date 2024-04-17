@@ -29,6 +29,7 @@ namespace TypesystemSnacks
             Console.WriteLine("Il numero maggiore è: " + maggiore);
 
 
+
             // Snack 2. L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
             Console.WriteLine("Snack 2. L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.");
 
@@ -92,15 +93,16 @@ namespace TypesystemSnacks
             for (int i = 2; i <= 10; i++)
             {
                 // Aggiunge il valore di i alla somma
-                somma += i;
+                sum += i;
             }
 
             // Calcola la media dividendo la somma per il numero di elementi
-            media = (double)somma / 9; // 9 perché ci sono 9 numeri da 2 a 10
+            media = (double)sum / 9; // 9 perché ci sono 9 numeri da 2 a 10
 
             // Stampa la somma e la media
-            Console.WriteLine($"La somma dei numeri da 2 a 10 è: {somma}" );
+            Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sum}" );
             Console.WriteLine($"La media dei numeri da 2 a 10 è: {media:F2} ");
+
 
 
             // Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
@@ -122,6 +124,80 @@ namespace TypesystemSnacks
                 // nel caso il numero è dispari
                 Console.WriteLine("Il numero inserito è dispari. Il successivo è: " + (number + 1));
             }
+
+
+
+            // Snack 6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+            Console.WriteLine("In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.");
+
+            // Creo l'array con il nome degli invitati
+            string[] nomiInvitati = { "Massimo Boldi", "Christian De Sica", "Enzo Salvi", "Diego Abatantuono", "Michael Jackson di Latina" };
+
+            // Chiedo all'utente il suo nome
+            Console.WriteLine("Inserisci il tuo nome:");
+
+            // Leggo l'input dell'utente e lo memorizzo nella variabile "nomeUtente"
+            string nomeUtente = Console.ReadLine();
+
+            // Creo la variabile booleana invitato e le do il valore false di default
+            bool invitato = false;
+
+            // Verifico se il nome dell'utente è presente nell'array degli invitati
+            foreach (string nome in nomiInvitati)
+            {
+                if (nome.Equals(nomeUtente))
+                {
+                    invitato = true;
+                    break;
+                }
+            }
+            // Stampo il risultato del controllo
+            if (invitato)
+            {
+                Console.WriteLine("Sei invitato alla festa del Grande Gatsby. Benvenuto!");
+            }
+            else
+            {
+                Console.WriteLine("Mi dispiace, non sei invitato alla festa del Grande Gatsby.");
+            }
+
+
+
+            //Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+            Console.WriteLine("Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.");
+
+            // Creao un array vuoto per memorizzare i numeri dispari
+            int[] numeriDispari = new int[6];
+
+            // Creo una variabile chiamata indice per tenere traccia della posizione nell'array
+            int indice = 0;
+
+            // Chiedo all'utente di inserire un numero 6 volte
+            for (int i = 0; i <6; i++)
+            {
+                Console.WriteLine("Inserisci il " + (i + 1) + "° numero" + ":");
+                int numero = int.Parse(Console.ReadLine());
+
+                // Verifica se il numero inserito è dispari
+                if (numero % 2 != 0)
+                {
+                    // Se è dispari, lo aggiunge all'array dei numeri dispari
+                    numeriDispari[indice] = numero;
+                    indice++; // Incrementa l'indice per spostarsi alla prossima posizione nell'array
+                }
+            }
+            // Stampa l'array dei numeri dispari
+            Console.WriteLine("I numeri dispari inseriti sono:");
+            for (int i = 0; i < indice; i++)
+            {
+                Console.WriteLine(numeriDispari[i]);
+            }
+
+
+
+            // Snack 8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+            Console.WriteLine("Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.");
+
 
         }
     }
