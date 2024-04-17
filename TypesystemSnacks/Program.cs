@@ -54,10 +54,30 @@ namespace TypesystemSnacks
             {
                 Console.WriteLine("La parola più corta è: " + secondaParola);
                 Console.WriteLine("La parola più lunga è: " + primaParola);
+            }
+
 
 
             // Snack 3. Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
+            Console.WriteLine("Snack 3. Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.");
+
+            // Dichiaro la variabile somma con valore = 0
+            int somma = 0;
+
+            // Ciclo for per effettuare 10 richieste all'utente
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Inserisci il numero " + (i+1) + ":");
+
+                // Leggo l'input dell'utente e lo converto in un numero intero
+                int numero = int.Parse(Console.ReadLine());
+
+                // Aggiungo il numero alla somma
+                somma += numero;
             }
+
+            // Stampo a schermo il risultato della somma dei 10 numeri
+            Console.WriteLine("La somma dei numeri inseriti è: " + somma);
         }
     }
 }
