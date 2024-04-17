@@ -101,6 +101,28 @@ namespace TypesystemSnacks
             // Stampa la somma e la media
             Console.WriteLine($"La somma dei numeri da 2 a 10 è: {somma}" );
             Console.WriteLine($"La media dei numeri da 2 a 10 è: {media:F2} ");
+
+
+            // Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+            Console.WriteLine("Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.");
+
+            //Chiedo all'utente di inserire un numero
+            Console.WriteLine("Inserisci un numero:");
+            
+            // Leggo l'input dell'utente e lo converto in un numero intero
+            int number = int.Parse(Console.ReadLine());
+
+            // Verifico se il numero è pari o dispari
+            if (number % 2 == 0)
+            {
+                // nel caso il numero è pari
+                Console.WriteLine("Il numero inserito è pari!");
+            }else
+            {
+                // nel caso il numero è dispari
+                Console.WriteLine("Il numero inserito è dispari. Il successivo è: " + (number + 1));
+            }
+
         }
     }
 }
