@@ -78,6 +78,28 @@ namespace TypesystemSnacks
 
             // Stampo a schermo il risultato della somma dei 10 numeri
             Console.WriteLine("La somma dei numeri inseriti è: " + somma);
+
+
+            // Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
+            Console.WriteLine("Snack 4. Calcola la somma e la media dei numeri da 2 a 10.");
+
+            //Dichiaro le variabili per memorizzare la somma e la media
+            int sum = 0;
+            double media = 0;
+
+            // Ciclo for per iterare da 2 a 10
+            for (int i = 2; i <= 10; i++)
+            {
+                // Aggiunge il valore di i alla somma
+                somma += i;
+            }
+
+            // Calcola la media dividendo la somma per il numero di elementi
+            media = (double)somma / 9; // 9 perché ci sono 9 numeri da 2 a 10
+
+            // Stampa la somma e la media
+            Console.WriteLine($"La somma dei numeri da 2 a 10 è: {somma}" );
+            Console.WriteLine($"La media dei numeri da 2 a 10 è: {media:F2} ");
         }
     }
 }
