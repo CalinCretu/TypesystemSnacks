@@ -107,7 +107,7 @@ namespace TypesystemSnacks
 
 
             // Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
-            Console.WriteLine("Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.");
+            Console.WriteLine("Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.");
 
             //Chiedo all'utente di inserire un numero
             Console.WriteLine("Inserisci un numero:");
@@ -130,7 +130,7 @@ namespace TypesystemSnacks
 
 
             // Snack 6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
-            Console.WriteLine("In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.");
+            Console.WriteLine("Snack 6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.");
 
             // Creo l'array con il nome degli invitati
             string[] nomiInvitati = { "Massimo Boldi", "Christian De Sica", "Enzo Salvi", "Diego Abatantuono", "Michael Jackson di Latina" };
@@ -166,7 +166,7 @@ namespace TypesystemSnacks
 
 
             //Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
-            Console.WriteLine("Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.");
+            Console.WriteLine("Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.");
 
             // Creao un array vuoto per memorizzare i numeri dispari
             int[] numeriDispari = new int[6];
@@ -198,7 +198,7 @@ namespace TypesystemSnacks
 
 
             // Snack 8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
-            Console.WriteLine("Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.");
+            Console.WriteLine("Snack 8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.");
 
             // Creo un array di numeri interi
             int[] numeri = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
@@ -226,7 +226,7 @@ namespace TypesystemSnacks
 
 
             // Snack 9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
-            Console.WriteLine("Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.");
+            Console.WriteLine("Snack 9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.");
 
             // Creo un array vuoto
             int[] arrayNumeri = new int[0];
@@ -261,7 +261,7 @@ namespace TypesystemSnacks
 
 
             // Snack 10. Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
-            Console.WriteLine("Fai inserire un numero, che chiameremo N, all’utente.\r\nGenera N array, ognuno formato da 10 numeri casuali tra 1 e 100.\r\nOgni volta che ne crei uno, stampalo a schermo.\r\n");
+            Console.WriteLine("Snack 10. Fai inserire un numero, che chiameremo N, all’utente.\r\nGenera N array, ognuno formato da 10 numeri casuali tra 1 e 100.\r\nOgni volta che ne crei uno, stampalo a schermo.\r\n");
 
             // Chiedo all'utente di inserire un numero
             Console.WriteLine("Inserisci un numero");
